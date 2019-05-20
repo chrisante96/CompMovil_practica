@@ -6,70 +6,56 @@ import javax.faces.context.FacesContext;
 @ManagedBean
 @RequestScoped
 public class MobiJavaBeans {
-int n1;
-int n2;
-int s;
-int r;
-int m;
-float d;
+int num1=0;
+int num2=0;
+int sum=0;
+int res=0;
+int mul=0;
+float div;
 public MobiJavaBeans() {
 }
-public void sumar(){
-s = n1 + n2;
-FacesContext c = FacesContext.getCurrentInstance();
-c.addMessage(null, new FacesMessage("Calculadora","La suma= "+s));
+public int getNum1() {
+return num1;
 }
-public void resta(){
-r = n1 - n2;
-FacesContext c = FacesContext.getCurrentInstance();
-c.addMessage(null, new FacesMessage("Calculadora","La resta= "+r));
+public void setNum1(int num1) {
+this.num1 = num1;
 }
-
-public void multiplicacion(){
-m = n1 * n2;
-FacesContext c = FacesContext.getCurrentInstance();
-c.addMessage(null, new FacesMessage("Calculadora","multiplicacion= "+m));
+public int getNum2() {
+return num2;
 }
-
-public void divicion(){
-d = n1 / n2;
-FacesContext c = FacesContext.getCurrentInstance();
-c.addMessage(null, new FacesMessage("Calculadora","divicion= "+d));
-}
-public int getN1() {
-return n1;
-}
-public void setN1(int n1) {
-this.n1 = n1;
-}
-public int getN2() {
-return n2;
-}
-public void setN2(int n2) {
-this.n2 = n2;
+public void setNum2(int num2) {
+this.num2 = num2;
 }
 public int getSuma() {
-return s;
+return sum;
 }
-public void setSumao(int s) {
-this.s = s;
+public void setSuma(int sum) {
+this.sum = sum;
 }
 public int getResta() {
-return r;
+return res;
 }
-public void setResta(int r) {
-this.r = r;
+public void setResta(int res) {
+this.res = res;
 }
-public int getMultipicacion() {
-return m;
+public int getMulti() {
+return mul;
 }
-public void setMultipicacion(int m) {
-this.m = m;
+public void setMulti(int mul) {
+this.mul = mul;
 }
-public float getDivicion() {
-return d;
+public float getDiv() {
+return div;
 }
-public void setDivicion(float d) {
-this.d = d;
+public void setDiv(float  div) {
+this.div = div;
+}
+public void operaciones(){
+    sum = num1 + num2;
+    res = num1 - num2;
+    mul = num1 * num2;
+    div = num1 / num2;
+FacesContext c = FacesContext.getCurrentInstance();
+c.addMessage(null, new FacesMessage("***OPERACIONES***","1) Suma: " +sum+ "\n"+" ||  2) Resta: "+res+" ||  3) Multiplicacion: "+mul+"               ||  4) Division:"+div));
 }
 }

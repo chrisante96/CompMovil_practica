@@ -11,25 +11,22 @@
     </h:head>
     <h:body>
         <pm:page>
-            <pm:header title="Calculadora"></pm:header>
+            <pm:header title="COMPUTACION MOVIL"></pm:header>
+            <pm:header title="OPERACIONES BASICAS"></pm:header>
             <pm:content>
-                <h:form id="formu">
+                <h:form id="formulario">
                     <p:growl id="growl" showDetail="true" />
                     <pm:field>
-                        <p:outputLabel  value="Numero 1:" />
-                        <p:inputText id="n1" value="#{mobiJavaBeans.n1}" />
+                        <p:outputLabel  value="PRIMER NUMERO: " />
+                        <p:inputText id="num1" value="#{mobiJavaBeans.num1}" />
                     </pm:field>
                     <pm:field>
-                        <p:outputLabel value="Numero 2:" />
-                        <p:inputText id="n2" value="#{mobiJavaBeans.n2}" />
+                        <p:outputLabel value="SEGUNDO NUMERO: " />
+                        <p:inputText id="num2" value="#{mobiJavaBeans.num2}" />
                     </pm:field>
-                    <p:commandButton value="Sumar" update="growl" icon="check" actionListener="#{mobiJavaBeans.sumar()}" />
-                    <p:commandButton value="Resta" update="growl" icon="check" actionListener="#{mobiJavaBeans.resta()}" />
-                    <p:commandButton value="Multiplicacion" update="growl" icon="check" actionListener="#{mobiJavaBeans.multiplicacion()}" />
-                    <p:commandButton value="Divicion" update="growl" icon="check" actionListener="#{mobiJavaBeans.divicion()}"/>
+                    <p:commandButton value="Ver Resultados" update="growl" icon="check" actionListener="#{mobiJavaBeans.operaciones()}" />
                 </h:form>
             </pm:content>
-            <pm:footer title="jhonny pascual colque"></pm:footer>
         </pm:page>
     </h:body>
 </html>
